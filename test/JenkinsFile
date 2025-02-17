@@ -42,7 +42,7 @@ pipeline {
                     git config --global user.email "sayanbose024@gmail.com"
                     git config --global user.name "Sayan Bose"
                     cd MyJenkins/Manifests/
-                    sed -i 's,sayan510/springapi.*,sayan510/springapi:${BUILD_NUMBER},g' deployment.yaml
+                    sed -i 's,sayan510/springapi.*,sayan510/springapi:${BUILD_NUMBER},g' springapi_application.yaml
                     cat springapi_application.yaml
                     git add springapi_application.yaml
                     git commit -m "Image updated by Jenkins CI pipeline"
