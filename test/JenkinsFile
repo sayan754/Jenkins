@@ -46,7 +46,7 @@ pipeline {
                     cat springapi_application.yaml
                     git add springapi_application.yaml
                     git commit -m "Image updated by Jenkins CI pipeline"
-                    git push git@github.com:sayan510/Jenkins.git main
+                    git push git@github.com:sayan754/Jenkins.git main
                     """
                 }
             }
