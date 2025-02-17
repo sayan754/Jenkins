@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Build and Push Docker Image') {
             environment {
-              DOCKER_IMAGE = "jmbharathram/springapi:${BUILD_NUMBER}"
+              DOCKER_IMAGE = "sayan510/springapi:${BUILD_NUMBER}"
               REGISTRY_CREDENTIALS = credentials('docker-secret')
             }
             steps {
@@ -39,14 +39,14 @@ pipeline {
             steps {
                 script {
                     sh """
-                    git config --global user.email "executeoncommand@gmail.com"
-                    git config --global user.name "Bharath Ram"
+                    git config --global user.email "sayanbose024@gmail.com"
+                    git config --global user.name "Sayan Bose"
                     cd MyJenkins/Manifests/
-                    sed -i 's,jmbharathram/springapi.*,jmbharathram/springapi:${BUILD_NUMBER},g' deployment.yaml
+                    sed -i 's,sayan510/springapi.*,sayan510/springapi:${BUILD_NUMBER},g' deployment.yaml
                     cat springapi_application.yaml
                     git add springapi_application.yaml
                     git commit -m "Image updated by Jenkins CI pipeline"
-                    git push git@github.com:jmbharathram/Jenkins.git main
+                    git push git@github.com:sayan510/Jenkins.git main
                     """
                 }
             }
