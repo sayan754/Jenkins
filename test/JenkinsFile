@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'git@github.com:jmbharathram/SampleJavaApps.git',
+                git url: 'git@github.com:sayan754/SampleJavaApps.git',
                     branch: 'main',
                     credentialsId: 'git-ssh-cred'
                 dir('MyJenkins') {
-                    git url: 'git@github.com:jmbharathram/Jenkins.git',
+                    git url: 'git@github.com:sayan754/Jenkins.git',
                         branch: 'main',
                         credentialsId: 'git-ssh-cred'
                 }
