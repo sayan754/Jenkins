@@ -65,6 +65,7 @@ apt install maven
 mvn -version
 
 # Add these to .bashrc
+vi .bashrc
 export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
 export MAVEN_HOME=/usr/share/maven
 export PATH=$PATH:$MAVEN_HOME/bin
