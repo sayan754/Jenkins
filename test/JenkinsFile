@@ -8,10 +8,10 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git url: 'git@github.com:sayan754/SampleJavaApps.git',
+        git url: 'https@github.com:sayan754/SampleJavaApps.git',
             branch: 'main',
         dir('MyJenkins') {
-            git url: 'git@github.com:sayan754/Jenkins.git',
+            git url: 'https@github.com:sayan754/Jenkins.git',
                 branch: 'main',
         }
       }
