@@ -40,7 +40,7 @@ pipeline {
     }
     stage('Update Image') {
       steps {
-        script {
+        withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
             sh """
             git config --global user.email "sayanbose024@gmail.com"
             git config --global user.name "Sayan Bose"
