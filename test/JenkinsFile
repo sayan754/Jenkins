@@ -10,11 +10,9 @@ pipeline {
       steps {
         git url: 'git@github.com:sayan754/SampleJavaApps.git',
             branch: 'main',
-            credentialsId: 'git-ssh-cred'
         dir('MyJenkins') {
             git url: 'git@github.com:sayan754/Jenkins.git',
                 branch: 'main',
-                credentialsId: 'git-ssh-cred'
         }
       }
     }
